@@ -11,13 +11,13 @@ public class ScoreManager : MonoBehaviour
     /// <summary>
     /// スコアの合計値を格納する変数
     /// </summary>
-    public int totalScore = 0;
+    private int totalScore = 0;
     [SerializeField] Text scoreText;
 
     /// <summary>
     /// 入力したスコア値を合計スコア変数に加算するメソッド
     /// </summary>
-    public void DisplayScore(int scoreValue = 1)
+    public void IncreaseScore(int scoreValue = 1)
     {
         totalScore += scoreValue;
 
