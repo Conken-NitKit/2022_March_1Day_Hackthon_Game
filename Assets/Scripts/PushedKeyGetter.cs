@@ -10,7 +10,7 @@ public class PushedKeyGetter : MonoBehaviour
     [SerializeField]
     AnswerJudgment answerJudgment;
 
-    private float acquisitionKeyIntervalSeconds = 0.005f;
+    private float acquisitionKeyIntervalSeconds = 0.001f;
 
     private string pushedKey;
 

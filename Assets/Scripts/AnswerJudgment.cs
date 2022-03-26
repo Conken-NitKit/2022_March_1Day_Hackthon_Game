@@ -15,6 +15,9 @@ public class AnswerJudgment : MonoBehaviour
     ScoreManager scoreManager;
 
     [SerializeField]
+    TimeLimit timeLimit;
+
+    [SerializeField]
     Text textTest;
 
     /// <summary>
@@ -25,11 +28,12 @@ public class AnswerJudgment : MonoBehaviour
         if(pushedKey == typeKeyQuestion.questionChar.ToString())
         {
             textTest.text = "hoge";
-            scoreManager.DisplayScore();
+            scoreManager.IncreaseScore();
             typeKeyQuestion.SelectRandomQestion();
         }
         else
         {
+            timeLimit.ReduceRemainingTime();
             textTest.text = "tigau";
         }
     }
