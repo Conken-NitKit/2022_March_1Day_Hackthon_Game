@@ -16,6 +16,9 @@ public class TimeLimit : MonoBehaviour
     [SerializeField]
     private Text timeTest;
 
+    [SerializeField]
+    GameClear gameClear;
+
     /// <summary>
     /// 制限時間を減らしていくメソッド
     /// </summary>
@@ -28,6 +31,7 @@ public class TimeLimit : MonoBehaviour
             yield return new WaitForSeconds(timeCountWaitSeconds);
         }
         timeTest.text = "残り時間 : " + 0.ToString("F2");
+        gameClear.ClearGame();
     }
 
     /// <summary>

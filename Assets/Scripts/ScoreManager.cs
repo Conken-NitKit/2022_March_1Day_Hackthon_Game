@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour
     /// <summary>
     /// ?X?R?A?????v?l???i?[????????
     /// </summary>
-    private int totalScore = 0;
+    public int totalScore { get; private set; } = 0;
     [SerializeField] Text scoreText;
 
     private void Start()
