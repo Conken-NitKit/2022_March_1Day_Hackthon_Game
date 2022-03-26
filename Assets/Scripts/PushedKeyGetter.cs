@@ -14,15 +14,10 @@ public class PushedKeyGetter : MonoBehaviour
 
     private string pushedKey;
 
-    private void Start()
-    {
-        StartCoroutine(GetPushedKey());
-    }
-
     /// <summary>
     /// 押されたKeyを取得するメソッド
     /// </summary>
-    private IEnumerator GetPushedKey()
+    public IEnumerator GetPushedKey()
     {
         while (true)
         {
