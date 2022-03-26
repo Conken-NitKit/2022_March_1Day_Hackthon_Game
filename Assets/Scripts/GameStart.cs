@@ -23,7 +23,7 @@ public class GameStart : MonoBehaviour
             StartCoroutine(timeLimit.CountDownTime());
             StartCoroutine(pushedKeyGetter.GetPushedKey());
             typeKeyQuestion.SelectRandomQestion();
-        }); ;
+        });
     }
 
 }
