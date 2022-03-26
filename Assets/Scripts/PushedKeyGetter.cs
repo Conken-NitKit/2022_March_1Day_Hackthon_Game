@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Keyをゲットするクラス
+/// </summary>
 public class PushedKeyGetter : MonoBehaviour
 {
     [SerializeField]
@@ -10,24 +13,28 @@ public class PushedKeyGetter : MonoBehaviour
 
     private float acquisitionIntervalSeconds = 0.005f;
 
-    private string keyStr;
+    private string pushedKey;
 
     private void Start()
     {
         StartCoroutine(GetPushedKey());
     }
 
+    /// <summary>
+    /// 押されたKeyを取得するメソッド
+    /// </summary>
     private IEnumerator GetPushedKey()
     {
         while (true)
         {
-            keyStr = "";
+            pushedKey = "";
             if (Input.anyKeyDown)
             {
-                keyStr = Input.inputString;
-                textTest.text = keyStr.ToLower();
-            }
+                pushedKey = Input.inputString;
+            }  
+
             yield return new WaitForSeconds(acquisitionIntervalSeconds);
+            textTest.text = pushedKey.ToLower();//デバック用
         }
     }
 }
