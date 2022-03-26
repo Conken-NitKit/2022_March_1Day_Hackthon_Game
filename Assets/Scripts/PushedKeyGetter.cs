@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 /// <summary>
 /// 押されたKeyの管理クラス
@@ -9,7 +8,7 @@ using UnityEngine.UI;
 public class PushedKeyGetter : MonoBehaviour
 {
     [SerializeField]
-    Text textTest;
+    AnswerJudgment answerJudgment;
 
     private float acquisitionKeyIntervalSeconds = 0.005f;
 
@@ -31,10 +30,10 @@ public class PushedKeyGetter : MonoBehaviour
             if (Input.anyKeyDown)
             {
                 pushedKey = Input.inputString;
+                answerJudgment.DetermineAnswerCorrect(pushedKey);
             }  
 
             yield return new WaitForSeconds(acquisitionKeyIntervalSeconds);
-            textTest.text = pushedKey.ToLower();//デバック用
         }
     }
 }
