@@ -407,7 +407,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1663701265}
   - component: {fileID: 1663701266}
-  - component: {fileID: 1663701267}
   m_Layer: 0
   m_Name: SpawnBlock
   m_TagString: Untagged
@@ -443,20 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Block: {fileID: 4142421846975346793, guid: 1114f7615508fd34099845bc64fd2520, type: 3}
   camera: {fileID: 873519376}
---- !u!114 &1663701267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663701264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cefea8b565dfa5f4893fd9a0ad7b1ffb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  block: {fileID: 4142421846975346793, guid: 1114f7615508fd34099845bc64fd2520, type: 3}
-  blockManager: {fileID: 1663701266}
+  move: 0.9
 --- !u!1 &1876676835
 GameObject:
   m_ObjectHideFlags: 0

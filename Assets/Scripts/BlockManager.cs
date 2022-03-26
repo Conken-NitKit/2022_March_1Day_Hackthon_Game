@@ -10,6 +10,7 @@ public class BlockManager : MonoBehaviour
     /// </summary>
     [SerializeField] GameObject Block;
     [SerializeField] Camera camera;
+    [SerializeField] float move;
 
     private int count = 0;
     private const int Height = 2;
@@ -28,6 +29,17 @@ public class BlockManager : MonoBehaviour
         {
             GenerateBlock();
         }
+        if (Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            //GenerateBlock();
+            camera.gameObject.transform.position = new Vector3(0, move += 0.5f, -10);
+        }
+        if (Input.GetKeyUp(KeyCode.DownArrow))
+        { 
+            //GenerateBlock();
+            camera.gameObject.transform.position = new Vector3(0, move -= 0.5f , -10);
+        }
+
     }
 
     /// <summary>
@@ -37,7 +49,7 @@ public class BlockManager : MonoBehaviour
     {
         Instantiate(Block, new Vector2(0.0f, count * Height), Quaternion.identity);
         count++;
-        camera.gameObject.transform.position = new Vector3(0, count*Height, 0);
+       // camera.gameObject.transform.position = new Vector3(0, count*move , -10);
 
     }
     
