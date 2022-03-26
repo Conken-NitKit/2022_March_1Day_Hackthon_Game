@@ -11,7 +11,7 @@ public class PushedKeyGetter : MonoBehaviour
     [SerializeField]
     Text textTest;
 
-    private float acquisitionIntervalSeconds = 0.005f;
+    private float acquisitionKeyIntervalSeconds = 0.005f;
 
     private string pushedKey;
 
@@ -33,7 +33,7 @@ public class PushedKeyGetter : MonoBehaviour
                 pushedKey = Input.inputString;
             }  
 
-            yield return new WaitForSeconds(acquisitionIntervalSeconds);
+            yield return new WaitForSeconds(acquisitionKeyIntervalSeconds);
             textTest.text = pushedKey.ToLower();//デバック用
         }
     }
