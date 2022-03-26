@@ -15,25 +15,20 @@ public class TimeLimit : MonoBehaviour
     private float timeCountWaitSeconds;
 
     [SerializeField]
-    private Text textTest;
-
-    private void Start()
-    {
-        StartCoroutine(CountDownTime());
-    }
+    private Text timeTest;
 
     /// <summary>
     /// 制限時間を減らしていくメソッド
     /// </summary>
-    private IEnumerator CountDownTime()
+    public IEnumerator CountDownTime()
     {
         while(limitSeconds >= 0)
         {
             limitSeconds -= timeCountWaitSeconds;
-            textTest.text = "残り時間 : " + limitSeconds.ToString("F2");
+            timeTest.text = "残り時間 : " + limitSeconds.ToString("F2");
             yield return new WaitForSeconds(timeCountWaitSeconds);
         }
-        textTest.text = 0.ToString("F2");
+        timeTest.text = 0.ToString("F2");
     }
 
     /// <summary>
