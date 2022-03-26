@@ -16,6 +16,9 @@ public class AnswerJudgment : MonoBehaviour
     [SerializeField]
     TimeLimit timeLimit;
 
+    [SerializeField]
+    BlockManager blockManager;
+
     /// <summary>
     /// 押されたKeyが正解かどうか判断するメソッド
     /// </summary>
@@ -25,6 +28,7 @@ public class AnswerJudgment : MonoBehaviour
         {
             scoreManager.IncreaseScore();
             typeKeyQuestion.SelectRandomQestion();
+            blockManager.GenerateBlock();
         }
         else
         {
