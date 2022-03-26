@@ -13,15 +13,19 @@ public class TypeKeyQuestion : MonoBehaviour
 
     private string questions = "abcdefghijklmnopqrstuvwxyz0123456789";
 
-    private char questionChar;
+    public char questionChar { get; private set; }
+
+    private void Start()
+    {
+        SelectRandomQestion();
+    }
 
     /// <summary>
     /// 問題をランダムで選ぶクラス
     /// </summary>
-    char SelectRandomQestion()
+    public void SelectRandomQestion()
     {
         questionChar = questions[Random.Range(0 , questions.Length)];
         textTest.text = questionChar.ToString();//デバック用
-        return questionChar;
     }
 }

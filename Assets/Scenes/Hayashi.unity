@@ -462,6 +462,7 @@ GameObject:
   - component: {fileID: 2050086818}
   - component: {fileID: 2050086817}
   - component: {fileID: 2050086819}
+  - component: {fileID: 2050086820}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -476,12 +477,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050086816}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92e178483693744798f9ca37b9be1dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textTest: {fileID: 265458410}
+  answerJudgment: {fileID: 2050086820}
 --- !u!4 &2050086818
 Transform:
   m_ObjectHideFlags: 0
@@ -509,3 +511,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textTest: {fileID: 265458410}
+--- !u!114 &2050086820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050086816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b9dff3c0373e4a11973fc7968606f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
