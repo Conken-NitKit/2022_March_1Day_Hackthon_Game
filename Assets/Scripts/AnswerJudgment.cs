@@ -15,6 +15,9 @@ public class AnswerJudgment : MonoBehaviour
     ScoreManager scoreManager;
 
     [SerializeField]
+    TimeLimit timeLimit;
+
+    [SerializeField]
     Text textTest;
 
     /// <summary>
@@ -30,6 +33,7 @@ public class AnswerJudgment : MonoBehaviour
         }
         else
         {
+            timeLimit.ReduceRemainingTime();
             textTest.text = "tigau";
         }
     }
