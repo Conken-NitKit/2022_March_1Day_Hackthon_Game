@@ -14,6 +14,11 @@ public class ScoreManager : MonoBehaviour
     private int totalScore = 0;
     [SerializeField] Text scoreText;
 
+    private void Start()
+    {
+        scoreText.text = "SCORE: " + totalScore.ToString();
+    }
+
     /// <summary>
     /// ?????????X?R?A?l?????v?X?R?A?????????Z???????\?b?h
     /// </summary>
@@ -21,6 +26,5 @@ public class ScoreManager : MonoBehaviour
     {
         totalScore += scoreValue;
         scoreText.text = "SCORE: " + totalScore.ToString();
-
     }
 }
