@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Keyをゲットするクラス
+/// 押されたKeyの管理クラス
 /// </summary>
 public class PushedKeyGetter : MonoBehaviour
 {
