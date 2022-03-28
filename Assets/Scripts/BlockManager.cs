@@ -8,26 +8,10 @@ public class BlockManager : MonoBehaviour
     /// 2D?I?u?W?F?N?g??Block
     /// </summary>
     [SerializeField] GameObject Block;
-    [SerializeField] Camera camera;
-    [SerializeField] float move;
 
     private int count = 0;
     private const int Height = 2;
 
-    private void FixedUpdate()
-    {
-        if (Input.GetKeyUp(KeyCode.UpArrow))
-        {
-            //GenerateBlock();
-            camera.gameObject.transform.position = new Vector3(0, move += 0.5f, -10);
-        }
-        if (Input.GetKeyUp(KeyCode.DownArrow))
-        { 
-            //GenerateBlock();
-            camera.gameObject.transform.position = new Vector3(0, move -= 0.5f , -10);
-        }
-
-    }
 
     /// <summary>
     /// ?^?C?v?????????????????u???b?N??????????
