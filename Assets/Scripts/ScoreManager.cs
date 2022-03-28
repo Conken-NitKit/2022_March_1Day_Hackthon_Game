@@ -4,27 +4,27 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// スコアに関するクラス
+/// ?X?R?A?????????N???X
 /// </summary>
 public class ScoreManager : MonoBehaviour
 {
     /// <summary>
-    /// スコアの合計値を格納する変数
+    /// ?X?R?A?????v?l???i?[????????
     /// </summary>
-    private int totalScore = 0;
+    public int totalScore { get; private set; } = 0;
     [SerializeField] Text scoreText;
 
-    /// <summary>
-    /// 入力したスコア値を合計スコア変数に加算するメソッド
-    /// </summary>
-    public void IncreaseScore(int scoreValue = 1)
-    {
-        totalScore += scoreValue;
-
-    }
-    private void FixedUpdate()
+    private void Start()
     {
         scoreText.text = "SCORE: " + totalScore.ToString();
     }
 
+    /// <summary>
+    /// ?????????X?R?A?l?????v?X?R?A?????????Z???????\?b?h
+    /// </summary>
+    public void IncreaseScore(int scoreValue = 1)
+    {
+        totalScore += scoreValue;
+        scoreText.text = "SCORE: " + totalScore.ToString();
+    }
 }

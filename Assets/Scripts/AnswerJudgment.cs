@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 /// <summary>
 /// 正解かどうか判断するクラス
@@ -15,7 +14,10 @@ public class AnswerJudgment : MonoBehaviour
     ScoreManager scoreManager;
 
     [SerializeField]
-    Text textTest;
+    TimeLimit timeLimit;
+
+    [SerializeField]
+    BlockManager blockManager;
 
     /// <summary>
     /// 押されたKeyが正解かどうか判断するメソッド
@@ -24,13 +26,13 @@ public class AnswerJudgment : MonoBehaviour
     {
         if(pushedKey == typeKeyQuestion.questionChar.ToString())
         {
-            textTest.text = "hoge";
-            scoreManager.DisplayScore();
+            scoreManager.IncreaseScore();
             typeKeyQuestion.SelectRandomQestion();
+            blockManager.GenerateBlock();
         }
         else
         {
-            textTest.text = "tigau";
+            timeLimit.ReduceRemainingTime();
         }
     }
 }

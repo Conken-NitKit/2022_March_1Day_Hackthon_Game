@@ -10,21 +10,19 @@ public class PushedKeyGetter : MonoBehaviour
     [SerializeField]
     AnswerJudgment answerJudgment;
 
-    private float acquisitionKeyIntervalSeconds = 0.005f;
+    [SerializeField]
+    TimeLimit timeLimit;
+
+    private float acquisitionKeyIntervalSeconds = 0.001f;
 
     private string pushedKey;
-
-    private void Start()
-    {
-        StartCoroutine(GetPushedKey());
-    }
 
     /// <summary>
     /// 押されたKeyを取得するメソッド
     /// </summary>
-    private IEnumerator GetPushedKey()
+    public IEnumerator GetPushedKey()
     {
-        while (true)
+        while (timeLimit.limitSeconds >= 0)
         {
             pushedKey = "";
             if (Input.anyKeyDown)

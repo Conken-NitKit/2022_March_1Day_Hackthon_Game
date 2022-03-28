@@ -9,16 +9,11 @@ using UnityEngine.UI;
 public class TypeKeyQuestion : MonoBehaviour
 {
     [SerializeField]
-    Text textTest; 
+    Text questionTest; 
 
     private string questions = "abcdefghijklmnopqrstuvwxyz0123456789";
 
     public char questionChar { get; private set; }
-
-    private void Start()
-    {
-        SelectRandomQestion();
-    }
 
     /// <summary>
     /// 問題をランダムで選ぶクラス
@@ -26,6 +21,6 @@ public class TypeKeyQuestion : MonoBehaviour
     public void SelectRandomQestion()
     {
         questionChar = questions[Random.Range(0 , questions.Length)];
-        textTest.text = questionChar.ToString();//デバック用
+        questionTest.text = questionChar.ToString();
     }
 }
