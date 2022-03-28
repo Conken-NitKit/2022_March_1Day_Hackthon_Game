@@ -6,7 +6,7 @@ public class BlockManager : MonoBehaviour
 {
     
     /// <summary>
-    /// 2DオブジェクトのBlock
+    /// 2D?I?u?W?F?N?g??Block
     /// </summary>
     [SerializeField] GameObject Block;
     [SerializeField] Camera camera;
@@ -15,20 +15,8 @@ public class BlockManager : MonoBehaviour
     private int count = 0;
     private const int Height = 2;
 
-    float blockPositionY = 10.0f;
-
-    Transform myTransform;
-    private void Start()
-    {
-        //Vector2 pos = myTransform.position;
-    }
-
     private void FixedUpdate()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            GenerateBlock();
-        }
         if (Input.GetKeyUp(KeyCode.UpArrow))
         {
             //GenerateBlock();
@@ -43,14 +31,12 @@ public class BlockManager : MonoBehaviour
     }
 
     /// <summary>
-    /// タイプが成功したときにブロックを生成する
+    /// ?^?C?v?????????????????u???b?N??????????
     /// </summary>
     public void GenerateBlock()
     {
         Instantiate(Block, new Vector2(0.0f, count * Height), Quaternion.identity);
         count++;
-       // camera.gameObject.transform.position = new Vector3(0, count*move , -10);
-
     }
     
 }
