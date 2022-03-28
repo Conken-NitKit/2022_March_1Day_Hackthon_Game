@@ -5,24 +5,24 @@ using UnityEngine;
 /// <summary>
 /// 正解かどうか判断するクラス
 /// </summary>
-public class AnswerJudgment : MonoBehaviour
+public class AnswerHandler : MonoBehaviour
 {
     [SerializeField]
-    TypeKeyQuestion typeKeyQuestion;
+    private TypeKeyQuestion typeKeyQuestion;
 
     [SerializeField]
-    ScoreManager scoreManager;
+    private ScoreManager scoreManager;
 
     [SerializeField]
-    TimeLimit timeLimit;
+    private TimeLimit timeLimit;
 
     [SerializeField]
-    BlockManager blockManager;
+    private BlockManager blockManager;
 
     /// <summary>
     /// 押されたKeyが正解かどうか判断するメソッド
     /// </summary>
-    public void DetermineAnswerCorrect(string pushedKey)
+    public void OnAnswer(string pushedKey)
     {
         if(pushedKey == typeKeyQuestion.questionChar.ToString())
         {

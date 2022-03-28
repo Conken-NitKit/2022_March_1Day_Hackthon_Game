@@ -8,7 +8,7 @@ using UnityEngine;
 public class PushedKeyGetter : MonoBehaviour
 {
     [SerializeField]
-    AnswerJudgment answerJudgment;
+    AnswerHandler answerJudgment;
 
     [SerializeField]
     TimeLimit timeLimit;
@@ -28,7 +28,7 @@ public class PushedKeyGetter : MonoBehaviour
             if (Input.anyKeyDown)
             {
                 pushedKey = Input.inputString;
-                answerJudgment.DetermineAnswerCorrect(pushedKey);
+                answerJudgment.OnAnswer(pushedKey);
             }  
 
             yield return new WaitForSeconds(acquisitionKeyIntervalSeconds);

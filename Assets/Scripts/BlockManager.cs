@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BlockManager : MonoBehaviour
 {
-    
     /// <summary>
     /// 2D?I?u?W?F?N?g??Block
     /// </summary>
