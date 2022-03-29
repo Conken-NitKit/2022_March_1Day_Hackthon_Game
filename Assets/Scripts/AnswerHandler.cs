@@ -19,6 +19,9 @@ public class AnswerHandler : MonoBehaviour
     [SerializeField]
     private BlockManager blockManager;
 
+    [SerializeField]
+    private CameraManager cameraManager;
+
     /// <summary>
     /// 押されたKeyが正解かどうか判断するメソッド
     /// </summary>
@@ -29,6 +32,7 @@ public class AnswerHandler : MonoBehaviour
             scoreManager.IncreaseScore();
             typeKeyQuestion.SelectRandomQestion();
             blockManager.Generate();
+            cameraManager.MoveUpPosition();
         }
         else
         {

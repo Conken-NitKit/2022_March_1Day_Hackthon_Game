@@ -264,7 +264,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117793259}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 30}
   m_LocalScale: {x: 2.23, y: 3.2, z: 1}
   m_Children: []
@@ -391,6 +391,7 @@ GameObject:
   - component: {fileID: 192576748}
   - component: {fileID: 192576747}
   - component: {fileID: 192576746}
+  - component: {fileID: 192576749}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -464,6 +465,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &192576749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192576745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460992067d2034176b55e984ec7a3651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &231241566
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &324919351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,7 +727,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324919350}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1080}
   m_LocalScale: {x: 1944, y: 1080, z: 108}
   m_Children: []
@@ -1637,6 +1650,7 @@ MonoBehaviour:
   scoreManager: {fileID: 1758442728}
   timeLimit: {fileID: 1758442726}
   blockManager: {fileID: 1758442731}
+  cameraManager: {fileID: 192576749}
 --- !u!114 &1758442725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1705,7 +1719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e178483693744798f9ca37b9be1dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  answerJudgment: {fileID: 1758442724}
+  answerHandler: {fileID: 1758442724}
   timeLimit: {fileID: 1758442726}
 --- !u!114 &1758442730
 MonoBehaviour:
@@ -1740,9 +1754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f768c78ced9c04ca4be7c4da0c07ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Block: {fileID: 4142421846975346793, guid: 1114f7615508fd34099845bc64fd2520, type: 3}
-  camera: {fileID: 192576747}
-  move: 0
+  block: {fileID: 4142421846975346793, guid: 1114f7615508fd34099845bc64fd2520, type: 3}
 --- !u!1 &1805220350
 GameObject:
   m_ObjectHideFlags: 0
