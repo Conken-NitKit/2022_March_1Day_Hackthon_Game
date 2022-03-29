@@ -28,7 +28,7 @@ public class AnswerHandler : MonoBehaviour
         {
             scoreManager.IncreaseScore();
             typeKeyQuestion.SelectRandomQestion();
-            blockManager.GenerateBlock();
+            blockManager.Generate();
         }
         else
         {
