@@ -2,41 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 
+/// </summary>
 public class BlockManager : MonoBehaviour
 {
-    
-    /// <summary>
-    /// 2D?I?u?W?F?N?g??Block
-    /// </summary>
-    [SerializeField] GameObject Block;
-    [SerializeField] Camera camera;
-    [SerializeField] float move;
+    [SerializeField]
+    private GameObject block;
 
-    private int count = 0;
-    private const int Height = 2;
+    private float totalHeight = 0;
 
-    private void FixedUpdate()
-    {
-        if (Input.GetKeyUp(KeyCode.UpArrow))
-        {
-            //GenerateBlock();
-            camera.gameObject.transform.position = new Vector3(0, move += 0.5f, -10);
-        }
-        if (Input.GetKeyUp(KeyCode.DownArrow))
-        { 
-            //GenerateBlock();
-            camera.gameObject.transform.position = new Vector3(0, move -= 0.5f , -10);
-        }
+    private const float BlockHeight = 2;
 
-    }
+    private const float MinPositionX = -1;
+    private const float MaxPositionX = 1;
 
     /// <summary>
     /// ?^?C?v?????????????????u???b?N??????????
     /// </summary>
-    public void GenerateBlock()
+    public void Generate()
     {
-        Instantiate(Block, new Vector2(0.0f, count * Height), Quaternion.identity);
-        count++;
+        Instantiate(block, new Vector2(Random.Range(MinPositionX, MaxPositionX) , totalHeight), Quaternion.identity);
+        totalHeight += BlockHeight;
     }
     
 }
