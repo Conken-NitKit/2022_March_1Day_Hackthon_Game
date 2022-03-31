@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+
 /// <summary>
-/// ゲームがスタートしたとき、カーテンを下に移動させるクラス
+/// ゲームがスタートしたときの動きの管理クラス
 /// </summary>
 public class GameStart : MonoBehaviour
 {
     [SerializeField]
-    TimeLimit timeLimit;
+    private TimeLimit timeLimit;
 
     [SerializeField]
-    TypeKeyQuestion typeKeyQuestion;
+    private TypeKeyQuestion typeKeyQuestion;
 
     [SerializeField]
-    PushedKeyGetter pushedKeyGetter;
+    private PushedKeyGetter pushedKeyGetter;
 
     void Start()
     {
