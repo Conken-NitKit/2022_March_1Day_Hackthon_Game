@@ -22,7 +22,7 @@ public class BlockManager : MonoBehaviour
     /// </summary>
     public void Generate()
     {
-        Instantiate(block, new Vector2(Random.Range(MinPositionX, MaxPositionX) , totalHeight), Quaternion.identity);
+        Instantiate(block, new Vector3(Random.Range(MinPositionX, MaxPositionX) , totalHeight , 10f), Quaternion.identity);
         totalHeight += BlockHeight;
     }
     

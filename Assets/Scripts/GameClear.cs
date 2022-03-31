@@ -14,7 +14,7 @@ public class GameClear : MonoBehaviour
     [SerializeField]
     private ScoreManager scoreManager;
 
-    public void ClearGame()
+    public void ShowGameClearObjects()
     {
         foreach(GameObject resultObuject in resultObujects)
         {
