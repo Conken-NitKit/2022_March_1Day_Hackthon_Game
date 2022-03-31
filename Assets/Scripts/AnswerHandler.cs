@@ -27,7 +27,7 @@ public class AnswerHandler : MonoBehaviour
     /// </summary>
     public void OnAnswer(string pushedKey)
     {
-        if(pushedKey == typeKeyQuestion.questionChar.ToString())
+        if(pushedKey.ToUpper() == typeKeyQuestion.questionChar.ToString())
         {
             scoreManager.IncreaseScore();
             typeKeyQuestion.SelectRandomQestion();

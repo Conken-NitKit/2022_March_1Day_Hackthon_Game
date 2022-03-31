@@ -14,7 +14,7 @@ public class TimeLimit : MonoBehaviour
     private float timeCountWaitSeconds;
 
     [SerializeField]
-    private Text timeTest;
+    private Text timeText;
 
     [SerializeField]
     GameClear gameClear;
@@ -27,10 +27,10 @@ public class TimeLimit : MonoBehaviour
         while(limitSeconds >= 0)
         {
             limitSeconds -= timeCountWaitSeconds;
-            timeTest.text = "残り時間 : " + limitSeconds.ToString("F2");
+            timeText.text = "残り時間 : " + limitSeconds.ToString("F2");
             yield return new WaitForSeconds(timeCountWaitSeconds);
         }
-        timeTest.text = "残り時間 : " + 0.ToString("F2");
+        timeText.text = "残り時間 : " + 0.ToString("F2");
         gameClear.ShowGameClearObjects();
     }
 
