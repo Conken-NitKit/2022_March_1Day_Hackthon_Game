@@ -31,7 +31,7 @@ public class TimeLimit : MonoBehaviour
             yield return new WaitForSeconds(timeCountWaitSeconds);
         }
         timeTest.text = "残り時間 : " + 0.ToString("F2");
-        gameClear.ClearGame();
+        gameClear.ShowGameClearObjects();
     }
 
     /// <summary>
