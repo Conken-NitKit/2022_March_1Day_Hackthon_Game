@@ -13,7 +13,7 @@ public class PushedKeyGetter : MonoBehaviour
     [SerializeField]
     TimeLimit timeLimit;
 
-    private float acquisitionKeyIntervalSeconds = 0.001f;
+    private float acquisitionKeyIntervalSeconds = 0.001f;//タイプのチェックスパン
 
     private string pushedKey;
 
@@ -24,7 +24,7 @@ public class PushedKeyGetter : MonoBehaviour
     {
         while (timeLimit.limitSeconds >= 0)
         {
-            pushedKey = "";
+            //pushedKey = "";
             if (Input.anyKeyDown)
             {
                 pushedKey = Input.inputString;
