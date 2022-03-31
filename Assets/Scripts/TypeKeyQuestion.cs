@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class TypeKeyQuestion : MonoBehaviour
 {
     [SerializeField]
-    Text questionTest; 
+    private Text questionTest; 
 
     private string questions = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
