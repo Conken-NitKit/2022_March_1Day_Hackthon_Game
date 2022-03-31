@@ -24,7 +24,6 @@ public class PushedKeyGetter : MonoBehaviour
     {
         while (timeLimit.limitSeconds >= 0)
         {
-            //pushedKey = "";
             if (Input.anyKeyDown)
             {
                 pushedKey = Input.inputString;

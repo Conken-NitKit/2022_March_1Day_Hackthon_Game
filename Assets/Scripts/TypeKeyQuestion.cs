@@ -11,7 +11,7 @@ public class TypeKeyQuestion : MonoBehaviour
     [SerializeField]
     Text questionTest; 
 
-    private string questions = "abcdefghijklmnopqrstuvwxyz0123456789";
+    private string questions = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
     public char questionChar { get; private set; }
 
