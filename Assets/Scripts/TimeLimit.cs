@@ -8,7 +8,7 @@ using UnityEngine.UI;
 /// </summary>
 public class TimeLimit : MonoBehaviour
 {
-    public float limitSeconds;
+    public float limitSeconds { get; private set; } = 60;
 
     [SerializeField]
     private float timeCountWaitSeconds;
@@ -17,7 +17,7 @@ public class TimeLimit : MonoBehaviour
     private Text timeText;
 
     [SerializeField]
-    GameClear gameClear;
+    private GameClear gameClear;
 
     /// <summary>
     /// 制限時間を減らしていくメソッド
@@ -30,7 +30,7 @@ public class TimeLimit : MonoBehaviour
             timeText.text = "残り時間 : " + limitSeconds.ToString("F2");
             yield return new WaitForSeconds(timeCountWaitSeconds);
         }
-        timeText.text = "残り時間 : " + 0.ToString("F2");
+        timeText.text = "残り時間 : 0.00";
         gameClear.ShowGameClearObjects();
     }
 
