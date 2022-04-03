@@ -22,6 +22,9 @@ public class AnswerHandler : MonoBehaviour
     [SerializeField]
     private CameraManager cameraManager;
 
+    [SerializeField]
+    private BackGround backGround;
+
     /// <summary>
     /// 押されたKeyが正解かどうか判断するメソッド
     /// </summary>
@@ -33,6 +36,7 @@ public class AnswerHandler : MonoBehaviour
             typeKeyQuestion.SelectRandomQestion();
             blockManager.Generate();
             cameraManager.MoveUpPosition();
+            backGround.MakeTransparentBackGround();
         }
         else
         {
